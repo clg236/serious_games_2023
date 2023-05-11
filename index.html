@@ -6,76 +6,153 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Retro CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            background-color: #000080;
+            color: #FFFFFF;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+            background-image: url('http://cs.gettysburg.edu/~duncjo01/archive/patterns/geocities/backgrounds/Generic/fanpage_bk.gif');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            text-align: center;
+
+
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #FFFF00;
+            color: #000080;
+            margin: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            padding-bottom: 20px;
+        }
+
+        .card-title {
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+            color: #FF4500;
+        }
+
+        .btn {
+            background: linear-gradient(to right, #FF00FF 0%, #00FF00 100%);
+            border: none;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s;
+        }
+
+        .btn:hover {
+            background-position: right center;
+            color: #000000;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+        
+        .card-img-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            overflow: hidden;
+            height: 200px;
+        }
+
+
+
+        marquee {
+            color: #FF0000;
+            font-size: 2em;
+        }
+    </style>
 
     <title>Serious Games -- ITP - Spring 2023</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="text-center my-4">Serious Games -- ITP - Spring 2023</h1>
-        <h2 class="text-center my-4">Description Here</h2>
-        <div class="row">
+    <marquee>Welcome to Serious Games -- ITP - Spring 2023!!!</marquee>
+    <h1 class="text-center my-4">Serious Games -- ITP - Spring 2023</h1>
+    <h2 class="text-center my-4">Description Here</h2>
+    <div class="row" style="justify-content: center;">
 
-            <!-- All The Pixels: Aliza Habib -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img src="pixels/title.png" class="card-img-top" alt="All The Pixels">
-                    <div class="card-body">
-                        <h5 class="card-title">All the Pixels</h5>
-                        <p class="card-text">All the pixels is a color based game where the player tries to escape a
-                            level by exploring clues and finding platforms using color contrast. Tutorial level..</p>
-                        <p class="card-footer">By: Aliza Habib</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="pixels/index.html" class="btn btn-primary">Play Now</a>
-                    </div>
-                </div>
+        <!-- All The Pixels: Aliza Habib -->
+        <div class="card" style="width: 18rem;">
+            <div class="card-img-top">
+                <img src="pixels/title.png"  alt="All The Pixels" style="width: 100%; height: auto;">
             </div>
-
-            <!-- All The Pixels: Can You Finish The Hike: La'Kay Hodge -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img src="hiking/title.png" class="card-img-top" alt="Can You Finish The Hike?">
-                    <div class="card-body">
-                        <h5 class="card-title">Can You Finish The Hike?</h5>
-                        <p class="card-text">This is a game meant to educate players on various survival tips in a
-                            low-stakes fun setting. Everything from poisonous mushrooms to how to use bear spray. Keep
-                            your friend safe and happy to reach the end! </p>
-                        <p class="card-footer">By: La'Kay Hodge</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="hiking/index.html" class="btn btn-primary">Play Now</a>
-                    </div>
-                </div>
+            <div class="card-body">
+                <h5 class="card-title">All the Pixels</h5>
+                <p class="card-text">All the pixels is a color based game where the player tries to escape a
+                    level by exploring clues and finding platforms using color contrast. Tutorial level..</p>
+                <p class="card-footer">By: Aliza Habib</p>
+                <a href="pixels/index.html" class="btn btn-primary">Play Now</a>
             </div>
+        </div>
 
-            <!-- Potatoes of the World, Unite!: Zhiyue Huang, Kitty Guo -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img src="potatoes/title.png" class="card-img-top" alt="Potatoes of The World">
-                    <div class="card-body">
-                        <h5 class="card-title">Potatoes of the World, Unite!</h5>
-                        <p class="card-text">Description: Potatoes of the World, Unite! is a turn based farming game where you plant potatoes, harvest potatoes, and chop potatoes into fries, as a ... potato yourself! You're living in a cruel world where you have to prove your worth to human beings to avoid being chopped into fries yourself! However, there is still a chance that you can rebel against these evil human beings... (This game is still under construction. Hope to see you with an upgraded version... later!)</p>
-                        <p class="card-footer">By: Zhiyue Huang, Kitty Guo</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="potatoes/index.html" class="btn btn-primary">Play Now</a>
-                    </div>
-                </div>
+        <!-- Can You Finish The Hike: La'Kay Hodge -->
+        <div class="card" style="width: 18rem; margin: 10px;">
+            <div class="card-img-top">
+                <img src="hiking/title.png" class="card-img-top" alt="Can You Finish The Hike?" style="width: 100%; height: auto;">
             </div>
+            
+            <div class="card-body">
+                <h5 class="card-title">Can You Finish The Hike?</h5>
+                <p class="card-text">This is a game meant to educate players on various survival tips in a
+                    low-stakes fun setting. Everything from poisonous mushrooms to how to use bear spray. Keep
+                    your friend safe and happy to reach the end! </p>
+                <p class="card-footer">By: La'Kay Hodge</p>
+                <a href="hiking/index.html" class="btn btn-primary">Play Now</a>
+            </div>
+        </div>
 
-            <!-- End of repeat section -->
+        <!-- Potatoes of the World, Unite!: Zhiyue Huang, Kitty Guo -->
+        <div class="card" style="width: 18rem; margin: 10px;">
+            <div class="card-img-top">
+                <img src="potatoes/title.png" class="card-img-top" alt="Potatoes of The World" style="width: 100%; height: auto;">
+            </div>
+            
+            <div class="card-body">
+                <h5 class="card-title">Potatoes of the World, Unite!</h5>
+                <p class="card-text">Description: Potatoes of the World, Unite! is a turn based farming game where you
+                    plant potatoes, harvest potatoes, and chop potatoes into fries, as a ... potato yourself! You're
+                    living in a cruel world where you have to prove your worth to human beings to avoid being chopped
+                    into fries yourself! However, there is still a chance that you can rebel against these evil human
+                    beings... (This game is still under construction. Hope to see you with an upgraded version...
+                    later!)</p>
+                <p class="card-footer">By: Zhiyue Huang, Kitty Guo</p>
+                <a href="potatoes/index.html" class="btn btn-primary">Play Now</a>
+            </div>
+        </div>
 
+        <!-- Potatoes of the World, Unite!: Zhiyue Huang, Kitty Guo -->
+        <div class="card" style="width: 18rem; margin: 10px;">
+            <div class="card-img-top">
+                <img src="blood/title.png" class="card-img-top" alt="Untitled Blood Game" style="width: 100%; height: auto;">
+            </div>
+            
+            <div class="card-body">
+                <h5 class="card-title">Untitled Blood Game</h5>
+                <p class="card-text">Stuck in a death loop of bleeding out over and over again, Thana must butcher her
+                    way through the depths of Hell in order to kill the Blood Goddess that keeps resurrecting her.
+
+                    Controls: J to attack, WASD to move.</p>
+                <p class="card-footer">By: Kea Lia Pedersen</p>
+                <a href="blood/index.html" class="btn btn-primary">Play Now</a>
+            </div>
         </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <img src="https://web.archive.org/web/20090804113154/http://geocities.com/SunsetStrip/Lounge/7650/dollarspindownd.gif"
+        style="width: 100px; height: auto; position: fixed; bottom: 0; right: 0;">
 </body>
 
 </html>
