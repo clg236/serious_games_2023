@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://horrorgame-tbh/more game obj/tree.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 3.5, 2.41667 )
+
+[node name="tree" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3, 31 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 51 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -2, 6 )
+texture = ExtResource( 1 )
