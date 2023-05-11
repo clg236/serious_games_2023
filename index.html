@@ -18,14 +18,13 @@
             background-repeat: repeat-y;
             background-size: 100%;
             text-align: center;
-
-
         }
 
         .row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-gap: 20px;
+            justify-items: center;
         }
 
         .card {
@@ -34,6 +33,14 @@
             margin: 10px;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
             padding-bottom: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-body {
+            flex: 1 0 auto;
         }
 
         .card-title {
@@ -43,11 +50,17 @@
         }
 
         .btn {
+            padding: 10px 20px;
+            font-size: 18px;
             background: linear-gradient(to right, #FF00FF 0%, #00FF00 100%);
             border: none;
             color: #FFFFFF;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
             transition: all 0.5s;
+        }
+
+        .button-container {
+            margin-top: auto;
         }
 
         .btn:hover {
@@ -58,7 +71,7 @@
         .btn:active {
             transform: scale(0.95);
         }
-        
+
         .card-img-top {
             display: flex;
             align-items: flex-start;
@@ -66,8 +79,6 @@
             overflow: hidden;
             height: 200px;
         }
-
-
 
         marquee {
             color: #FF0000;
@@ -80,65 +91,71 @@
 
 <body>
     <marquee>Welcome to Serious Games -- ITP - Spring 2023!!!</marquee>
-    <h1 class="text-center my-4">Serious Games -- ITP - Spring 2023</h1>
-    <h2 class="text-center my-4">Description Here</h2>
     <div class="row" style="justify-content: center;">
 
         <!-- All The Pixels: Aliza Habib -->
         <div class="card" style="width: 18rem;">
             <div class="card-img-top">
-                <img src="pixels/title.png"  alt="All The Pixels" style="width: 100%; height: auto;">
+                <img src="pixels/title.png" alt="All The Pixels" style="width: 100%; height: auto;">
             </div>
             <div class="card-body">
                 <h5 class="card-title">All the Pixels</h5>
                 <p class="card-text">All the pixels is a color based game where the player tries to escape a
                     level by exploring clues and finding platforms using color contrast. Tutorial level..</p>
                 <p class="card-footer">By: Aliza Habib</p>
-                <a href="pixels/index.html" class="btn btn-primary">Play Now</a>
+                <div class="button-container">
+                    <a href="pixels/index.html" class="btn btn-primary">Play Now</a>
+                </div>
             </div>
         </div>
 
         <!-- Can You Finish The Hike: La'Kay Hodge -->
         <div class="card" style="width: 18rem; margin: 10px;">
             <div class="card-img-top">
-                <img src="hiking/title.png" class="card-img-top" alt="Can You Finish The Hike?" style="width: 100%; height: auto;">
+                <img src="hiking/title.png" class="card-img-top" alt="Can You Finish The Hike?"
+                    style="width: 100%; height: auto;">
             </div>
-            
+
             <div class="card-body">
                 <h5 class="card-title">Can You Finish The Hike?</h5>
                 <p class="card-text">This is a game meant to educate players on various survival tips in a
                     low-stakes fun setting. Everything from poisonous mushrooms to how to use bear spray. Keep
                     your friend safe and happy to reach the end! </p>
                 <p class="card-footer">By: La'Kay Hodge</p>
-                <a href="hiking/index.html" class="btn btn-primary">Play Now</a>
+                <div class="button-container">
+                    <a href="hiking/index.html" class="btn btn-primary">Play Now</a>
+                </div>
+
             </div>
         </div>
 
         <!-- Potatoes of the World, Unite!: Zhiyue Huang, Kitty Guo -->
         <div class="card" style="width: 18rem; margin: 10px;">
             <div class="card-img-top">
-                <img src="potatoes/title.png" class="card-img-top" alt="Potatoes of The World" style="width: 100%; height: auto;">
+                <img src="potatoes/title.png" class="card-img-top" alt="Potatoes of The World"
+                    style="width: 100%; height: auto;">
             </div>
-            
+
             <div class="card-body">
                 <h5 class="card-title">Potatoes of the World, Unite!</h5>
                 <p class="card-text">Description: Potatoes of the World, Unite! is a turn based farming game where you
                     plant potatoes, harvest potatoes, and chop potatoes into fries, as a ... potato yourself! You're
                     living in a cruel world where you have to prove your worth to human beings to avoid being chopped
-                    into fries yourself! However, there is still a chance that you can rebel against these evil human
-                    beings... (This game is still under construction. Hope to see you with an upgraded version...
-                    later!)</p>
+                    into fries yourself!</p>
                 <p class="card-footer">By: Zhiyue Huang, Kitty Guo</p>
-                <a href="potatoes/index.html" class="btn btn-primary">Play Now</a>
+                <div class="button-container">
+                    <a href="potatoes/index.html" class="btn btn-primary">Play Now</a>
+                </div>
             </div>
         </div>
 
         <!-- Potatoes of the World, Unite!: Zhiyue Huang, Kitty Guo -->
         <div class="card" style="width: 18rem; margin: 10px;">
             <div class="card-img-top">
-                <img src="blood/title.png" class="card-img-top" alt="Untitled Blood Game" style="width: 100%; height: auto;">
+                <img src="blood/title.png" class="card-img-top" alt="Untitled Blood Game"
+                    style="width: 100%; height: auto;">
             </div>
-            
+
             <div class="card-body">
                 <h5 class="card-title">Untitled Blood Game</h5>
                 <p class="card-text">Stuck in a death loop of bleeding out over and over again, Thana must butcher her
@@ -146,7 +163,10 @@
 
                     Controls: J to attack, WASD to move.</p>
                 <p class="card-footer">By: Kea Lia Pedersen</p>
-                <a href="blood/index.html" class="btn btn-primary">Play Now</a>
+                <div class="button-container">
+                    <a href="blood/index.html" class="btn btn-primary">Play Now</a>
+                </div>
+
             </div>
         </div>
     </div>
